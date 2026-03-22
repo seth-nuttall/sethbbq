@@ -11,6 +11,7 @@
     --color-text: #333333;
     --color-text-light: #666666;
     --color-gray: #808080;
+    --color-bg: #2d1810;
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
@@ -208,7 +209,7 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 100%);
+    background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-bg) 100%);
     overflow: hidden;
     flex-direction: column;
 }
@@ -408,7 +409,7 @@ h1, h2, h3, h4 {
 /* ===== Menu Section ===== */
 .menu {
     padding: 100px 0;
-    background: linear-gradient(135deg, #f5f0eb 0%, #e8dcc8 100%);
+    background: linear-gradient(135deg, var(--color-light) 0%, var(--color-secondary) 100%);
 }
 
 .menu-grid {
@@ -546,7 +547,7 @@ h1, h2, h3, h4 {
 .form-group textarea {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--color-light);
     border-radius: 4px;
     font-family: var(--font-body);
     font-size: 1rem;
