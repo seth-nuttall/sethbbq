@@ -204,13 +204,39 @@ h1, h2, h3, h4 {
 /* ===== Hero Section ===== */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 100%);
     overflow: hidden;
+    flex-direction: column;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--color-white);
+    max-width: 800px;
+    padding: 0 20px;
 }
 
 .hero::before {
@@ -231,15 +257,6 @@ h1, h2, h3, h4 {
     right: 0;
     bottom: 0;
     background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: var(--color-white);
-    max-width: 800px;
-    padding: 0 20px;
 }
 
 .hero-title {
@@ -638,6 +655,22 @@ h1, h2, h3, h4 {
 
 /* ===== Responsive Design ===== */
 @media (max-width: 992px) {
+    .hero {
+        height: auto;
+        min-height: auto;
+        padding: 150px 0 100px;
+    }
+
+    .hero-image {
+        position: relative;
+        height: 400px;
+        order: -1;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
@@ -704,6 +737,26 @@ h1, h2, h3, h4 {
 
     .title-line {
         font-size: 2.5rem;
+    }
+
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .hero-content {
+        padding: 0 15px;
+    }
+
+    .hero-title {
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
     }
 }
 
